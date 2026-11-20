@@ -1,0 +1,350 @@
+/* Professional navigation. Uses the existing portfolio colors and typography. */
+.nav-icon,
+.section-icon,
+.jump-symbol,
+.jump-arrow {
+  display: inline-block;
+  flex: 0 0 auto;
+  vertical-align: middle;
+}
+
+.nav-icon {
+  width: 16px;
+  height: 16px;
+  opacity: 0.9;
+}
+
+.site-header nav {
+  align-items: center;
+  gap: clamp(18px, 2.2vw, 34px);
+}
+
+.site-header nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.site-header nav a:hover .nav-icon {
+  opacity: 1;
+}
+
+.section-jump {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 0 var(--gutter);
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+.section-jump > a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 29px 30px 29px 0;
+  min-width: 0;
+  text-decoration: none;
+}
+
+.section-jump > a + a {
+  border-left: 1px solid var(--line);
+  padding-left: 36px;
+  padding-right: 0;
+}
+
+.jump-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #c7cebb;
+  border-radius: 12px;
+  background: #e7ebdf;
+  color: #485b3c;
+  transition: background 180ms ease;
+}
+
+.jump-symbol {
+  width: 24px;
+  height: 24px;
+}
+
+.jump-label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.jump-label .eyebrow {
+  font-size: 9px;
+  color: var(--muted);
+}
+
+.jump-label strong {
+  font-size: clamp(15px, 1.45vw, 20px);
+  line-height: 1.35;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+.jump-arrow {
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  color: #667855;
+}
+
+.section-jump > a:hover .jump-icon {
+  background: #d6dfca;
+}
+
+.section-jump > a:hover strong {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.section-icon {
+  width: 25px;
+  height: 25px;
+  margin: -3px 13px 0 0;
+  color: #667855;
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 12px;
+    padding-top: 18px;
+    padding-bottom: 16px;
+  }
+
+  .site-header nav {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    width: 100%;
+    gap: 4px;
+  }
+
+  .site-header nav a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    min-height: 46px;
+    padding: 4px 0;
+    font-size: 9px;
+    text-align: center;
+  }
+
+  .nav-icon {
+    width: 17px;
+    height: 17px;
+  }
+
+  .cinema-topline {
+    top: 147px;
+  }
+
+  .section-jump {
+    grid-template-columns: 1fr;
+  }
+
+  .section-jump > a,
+  .section-jump > a + a {
+    gap: 16px;
+    padding: 23px 0;
+    border-left: 0;
+  }
+
+  .section-jump > a + a {
+    border-top: 1px solid var(--line);
+  }
+
+  .jump-label strong {
+    font-size: 17px;
+  }
+
+  .jump-icon {
+    width: 42px;
+    height: 42px;
+    flex-basis: 42px;
+  }
+
+  .jump-arrow {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .jump-icon {
+    transition: none;
+  }
+}
+
+/* Black theme: shared across the homepage, OMNIMAX, and Peru. */
+:root {
+  --paper: #101310;
+  --ink: #f1f1e9;
+  --muted: #b5beb0;
+  --line: #394036;
+  --accent: #c1d0b0;
+  --dark: #080b08;
+}
+
+.bio,
+.purpose-copy p {
+  color: #c2c9bd;
+}
+
+.purpose,
+.reflection {
+  background: #1b2119;
+}
+
+.accent {
+  color: #b8caa2;
+}
+
+.jump-icon {
+  color: #d2dfc3;
+  background: #232d1e;
+  border-color: #47563b;
+}
+
+.jump-arrow,
+.section-icon {
+  color: #b8caa2;
+}
+
+.section-jump > a:hover .jump-icon {
+  background: #35442c;
+}
+
+.peru-page .cinema-title h1 {
+  font-size: clamp(72px, 12vw, 180px);
+}
+
+.site-header a:focus-visible,
+.section-jump a:focus-visible {
+  outline-color: #c1d0b0;
+}
+
+/* Explicit Home navigation and dedicated identity pages. */
+.brand-controls {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex: 0 0 auto;
+}
+
+.home-link,
+.home-return,
+.footer-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 40px;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.home-link {
+  padding: 9px 15px;
+  border: 1px solid currentColor;
+  border-radius: 6px;
+  background: #0b100ac9;
+  color: #f3f5ec;
+}
+
+.home-link:hover {
+  background: #303b28;
+  text-decoration: none;
+}
+
+.home-link[aria-current="page"] {
+  border-color: #c1d0b0;
+}
+
+.footer-navigation {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.footer-home {
+  color: #d7e2cc;
+}
+
+.page-return {
+  padding: 26px var(--gutter) 0;
+}
+
+.home-return {
+  color: #c1d0b0;
+  font-size: 12px;
+}
+
+.about-page .about {
+  padding-top: 34px;
+}
+
+.section-rule .page-heading {
+  font-size: clamp(32px, 4.4vw, 64px);
+}
+
+.purpose-page .purpose {
+  padding-top: 45px;
+  margin-top: 20px;
+}
+
+.purpose-copy .page-heading {
+  font-size: clamp(44px, 5.4vw, 78px);
+  line-height: 1.02;
+  margin: 25px 0 30px;
+}
+
+@media (max-width: 760px) {
+  .brand-controls {
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .home-link {
+    min-height: 36px;
+    padding: 7px 12px;
+    font-size: 11px;
+  }
+
+  .cinema-topline {
+    top: 164px;
+  }
+
+  .footer-navigation {
+    gap: 20px;
+  }
+
+  .footer-home {
+    font-size: 11px;
+  }
+
+  .section-rule .page-heading {
+    font-size: 34px;
+  }
+
+  .about-page .section-rule {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .purpose-copy .page-heading {
+    font-size: 56px;
+  }
+}
