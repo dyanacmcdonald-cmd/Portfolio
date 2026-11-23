@@ -28,11 +28,10 @@
     </header>
     <main id="main">
       <section class="cinema" aria-labelledby="home-title">
-        <video id="opening-film" class="cinema-video" autoplay muted loop playsinline preload="metadata" poster="opening-poster.jpg" aria-label="Silent OMNIMAX sequence: museum exterior, lobby clock, film handling, and conversation.">
-          <source src="opening-sequence.mp4" type="video/mp4">
-        </video>
-        <div class="cinema-shade">
-        </div>
+        <a class="cinema-video" href="omnimax.html" aria-label="Open the OMNIMAX project and silent sequence">
+          <img class="cinema-video" src="opening-poster.jpg" alt="The Cincinnati museum building, fountain, and flower beds." width="1280" height="720" fetchpriority="high">
+          <span class="cinema-shade" aria-hidden="true"></span>
+        </a>
         <div class="cinema-topline">
           <span class="eyebrow">Selected work / 01</span><span class="eyebrow cinema-location">OMNIMAX</span>
         </div>
@@ -46,7 +45,7 @@
           <a class="light-link" href="omnimax.html">Explore the documentary <span aria-hidden="true">↗</span></a>
         </div>
         <div class="cinema-bottom">
-          <a href="about.html" class="eyebrow">Meet Daniel <span aria-hidden="true">↗</span></a><button class="play-toggle" type="button" data-controls="opening-film" aria-label="Pause opening video">Pause video <span aria-hidden="true">Ⅱ</span></button>
+          <a href="about.html" class="eyebrow">Meet Daniel <span aria-hidden="true">↗</span></a>
         </div>
       </section>
       <div class="film-caption">

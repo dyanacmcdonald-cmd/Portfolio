@@ -13,7 +13,7 @@
   </head>
   <body id="top" class="project-page">
     <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header on-paper">
+    <header class="site-header">
       <div class="brand-controls">
       <a class="wordmark" href="index.html" aria-label="Daniel Yanac McDonald, home">D<span class="wordmark-dot">.</span>YM<span class="wordmark-dot">.</span></a>
         <a class="home-link" href="index.html"><svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-8H9v8H4a1 1 0 0 1-1-1V10Z"/></svg><span>Home</span></a>
@@ -27,29 +27,30 @@
       </nav>
     </header>
     <main id="main">
-      <section class="project-intro section-pad">
-        <a class="eyebrow back-link" href="index.html">← Portfolio</a>
-        <div class="project-heading">
-          <div>
-            <p class="eyebrow">
-              Featured project / Documentary
-            </p>
-            <h1>
-              Behind the scenes<br>at OMNIMAX<span class="accent">.</span>
-            </h1>
-            <p class="project-subtitle">
-              Interview with James Burns
-            </p>
-          </div>
-          <a href="#documentary" class="round-link" aria-label="Go to documentary">↓</a>
+      <section class="cinema" aria-labelledby="omnimax-page-title">
+        <video id="opening-film" class="cinema-video" autoplay muted loop playsinline preload="metadata" poster="opening-poster.jpg" aria-label="Silent OMNIMAX sequence: museum exterior, lobby clock, film handling, and conversation.">
+          <source src="opening-sequence.mp4" type="video/mp4">
+        </video>
+        <div class="cinema-shade"></div>
+        <div class="cinema-topline">
+          <span class="eyebrow">OMNIMAX / Silent sequence</span>
+          <span class="eyebrow cinema-location">Interview with James Burns</span>
+        </div>
+        <div class="cinema-title">
+          <p class="eyebrow">Featured project / Documentary</p>
+          <h1 id="omnimax-page-title">Behind the scenes<br>at OMNIMAX<span>.</span></h1>
+          <p class="project-subtitle" style="margin: 0 0 20px;">Interview with James Burns</p>
+          <a class="light-link" href="#documentary">Watch the documentary <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="cinema-bottom">
+          <a class="eyebrow" href="index.html">← Back to Home</a>
+          <button class="play-toggle" type="button" data-controls="opening-film" aria-label="Pause opening video">Pause video <span aria-hidden="true">Ⅱ</span></button>
         </div>
       </section>
-      <figure class="project-panorama">
-        <img src="omnimax-exterior.jpg" alt="The Cincinnati museum building with its arched facade, fountain, and flower beds." width="1280" height="720">
-        <figcaption>
-          Behind the Scenes at OMNIMAX | Interview with James Burns
-        </figcaption>
-      </figure>
+      <div class="film-caption">
+        <span>Behind the Scenes at OMNIMAX | Interview with James Burns</span>
+        <span>Silent sequence</span>
+      </div>
       <section class="project-story section-pad" aria-labelledby="project-title">
         <div>
           <span class="eyebrow">01 / The project</span>
